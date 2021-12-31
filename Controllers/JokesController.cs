@@ -43,7 +43,7 @@ namespace WebApplicationMVC.Controllers
         //Takes a string paramater 
         public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
         {
-            //return a entire list tesing this 
+            //return a entire list tesing this TESTING THIS AGAIN 
             // WHERE: A SQL feature to specify where you want to selct items
             //list ans only show items that contain the search phrase 
                 // Similar to PHP project done
