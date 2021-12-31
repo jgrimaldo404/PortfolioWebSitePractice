@@ -2,11 +2,23 @@
 <h4>Contact me!</h4>
 <hr />
 <div class="socialLinks">
-   
-        
 
-        <p>Find me at <a href = "https://www.linkedin.com/in/joshua-grimaldo-545146207/" target = "_blank" > LinkedIn </a>  </p>
+          @{
 
+        var list = new List<KeyValuePair<string, string>>();
+
+        list.Add(new KeyValuePair<string, string>("https://www.linkedin.com/in/joshua-grimaldo-545146207/", "LinkedIn"));
+        list.Add(new KeyValuePair<string, string>( "https://github.com/jgrimaldo404", "GitHub"));
+
+     
+        @foreach(KeyValuePair<string, string> item in list){
+
+            var idk = item.Key;
+            var idk2 = item.Value;
+            <p>Find me at <a class = "link-Text" href = "@idk" target = "_blank"> @idk2 </a>  </p>
+       
+        }
+    }
 
         <!--  
         <form asp-action="ShowSearchResults">
@@ -27,6 +39,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
-</div>
+@*    <a asp-action="Index">Back to List</a>
+*@</div>
 
