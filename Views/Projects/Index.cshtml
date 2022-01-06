@@ -7,10 +7,10 @@
     ViewData["Title"] = "Featured Projects";
 }
 
-<h1 class = "projectHeader">@ViewData["Title"]</h1>
+<h1 >@ViewData["Title"]</h1>
 
 <p>
-    <a class = "btn-primary" asp-action="Create" >Add new project</a>
+    <a class = "projectButton" asp-action="Create" >Add new project</a>
 </p>
 
 
@@ -23,12 +23,17 @@
     <div class = "projectsText">
 
 @foreach (var item in Model) {
-            <h2 >
+
+    <hr/>   
+            <h2 class = "projectHeader">
                 @Html.DisplayFor(modelItem => item.ProjectName)
             </h2>
-            <hr/>
 
-            <h3>Tools</h3>
+            <h4>Source Code</h4>
+
+            <a href = "@Html.DisplayFor(modelItem => item.URL)" target = "_blank" class = "link-Text" > @Html.DisplayFor(modelItem => item.ProjectName) </a>
+
+            <h4 class = "toolsHeader">Tools</h4>
     <ul>
         <li>JavaScript</li>
         <li>React JS</li>
@@ -40,10 +45,15 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </p>
 
-         <h4>Source Code</h4>
-
-            <a href = "@Html.DisplayFor(modelItem => item.URL)" target = "_blank" class = "link-Text" > @Html.DisplayFor(modelItem => item.ProjectName) </a>
+         
+            @*<p>
+            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </p>*@
 }
+            
+
  </div> 
  <hr/>
 
