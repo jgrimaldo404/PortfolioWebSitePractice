@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "V/cjbZdcI6Frooz5/6cKI8uFU7Q1aXXUyTQS5FZNgZo=",
+  "Hash": "q+og0Spni6ZSICvKKNgYvdOdUqoaVvCLFFjyXsM7mRA=",
   "Source": "WebApplicationMVC",
   "BasePath": "_content/WebApplicationMVC",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\grima\\source\\repos\\WebApplicationMVC\\wwwroot\\frogIcon.ico",
+      "SourceId": "WebApplicationMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\grima\\source\\repos\\WebApplicationMVC\\wwwroot\\",
+      "BasePath": "_content/WebApplicationMVC",
+      "RelativePath": "frogIcon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\frogIcon.ico"
     },
     {
       "Identity": "C:\\Users\\grima\\source\\repos\\WebApplicationMVC\\wwwroot\\js\\site.js",

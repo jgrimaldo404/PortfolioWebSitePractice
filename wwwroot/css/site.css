@@ -10,6 +10,8 @@ html {
   html {
     font-size: 16px;
   }
+
+
 }
 
 html {
@@ -22,6 +24,25 @@ body {
   background-color: #ebebea;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+    border-radius: 8px;
+    padding: 10px;
+    text-decoration: none;
+   /* margin: 3rem;
+    margin-left: 69%;    */
+   position: relative;
+   left: 80%;
+}
+
+
+.projectHeader {
+
+margin-bottom: 0rem;
+
+}
 
 .myName {
     font-size: 230px;

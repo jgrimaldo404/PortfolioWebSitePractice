@@ -13,5 +13,6 @@ namespace WebApplicationMVC.Data
         {
         }
         public DbSet<WebApplicationMVC.Models.Joke> Joke { get; set; }
+        public DbSet<WebApplicationMVC.Models.Projects> Projects { get; set; }
     }
 }

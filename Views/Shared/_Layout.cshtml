@@ -23,8 +23,11 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Projects" asp-action="Index">Projects</a>
+                        </li> 
+                        @*<li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Projects</a>
-                        </li>
+                        </li>*@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Jokes" asp-action="Index">Jokes</a>
                         </li> 
@@ -34,6 +37,7 @@
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Test" asp-action="Testing">Testing</a>
                         </li> 
+                        
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
@@ -62,3 +66,4 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
