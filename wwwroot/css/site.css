@@ -44,6 +44,16 @@ body {
     
     }
 
+.goUpButton {
+    position: sticky;
+    left: 10%;
+   border-radius: 30px;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+ 
+}
+
 .toolsHeader {
     margin-top: 0.8%;
 }
@@ -109,6 +119,8 @@ text-align: center;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-delay: 1.9s;
+    font-size: 20px;
+    line-height: 1.7;
 }
 
 
@@ -163,4 +175,12 @@ height: 30px;
 .link-Text {
     text-decoration: none;
     
+}
+
+.meImage {
+
+    border-radius: 275px;
+    margin: 18px;
+
+
 }

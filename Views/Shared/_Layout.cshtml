@@ -11,8 +11,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style = "position: sticky; top: 0;">
+            <div class="container-fluid" style = "position: sticky;">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Joshua's Portfolio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +32,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Jokes" asp-action="Index">Jokes</a>
                         </li> 
-                        <li class="nav-item">
+                       @* <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Jokes" asp-action="ShowSearchForm">Socials</a>
-                        </li> 
+                        </li> *@
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Test" asp-action="Testing">Testing</a>
                         </li> 
@@ -56,9 +56,10 @@
 
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted" style = "position: sticky;  background-color: #ebebea;">
         <div class="container">
-            &copy; @DateTime.Now.Year - Joshua Grimaldo- <a asp-area="" asp-controller="Jokes" asp-action="ShowSearchForm">Contact</a>
+            &copy; @DateTime.Now.Year  Joshua Grimaldo  <a href = "https://www.linkedin.com/in/joshua-grimaldo-545146207/"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i> </a>
+             <a href = "https://github.com/jgrimaldo404"> <i class="fa fa-github fa-2x" aria-hidden="true"></i> </a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
