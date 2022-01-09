@@ -36,12 +36,15 @@ body {
     margin-left: 69%;    */
     position: relative;
     left: 80%;
+    transition-timing-function: ease;
+    -webkit-transition: background-color 1s;
 }
 
     .projectButton:hover {
-    
-    color: black;
-    
+        background-color: black;
+        color: antiquewhite;
+        transition-timing-function: ease;
+        -webkit-transition: background-color 1s;
     }
 
 .goUpButton {
@@ -174,13 +177,21 @@ height: 30px;
 
 .link-Text {
     text-decoration: none;
-    
+    font-size: 0.8rem;
+    color: black;
+}
+.link-Text-Icon {
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .meImage {
-
     border-radius: 275px;
     margin: 18px;
+}
 
+.backTo {
+
+text-decoration: none;
 
 }

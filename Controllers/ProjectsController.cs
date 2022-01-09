@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -45,6 +46,8 @@ namespace WebApplicationMVC.Controllers
         }
 
         // GET: Projects/Create
+        // Import ASP.NETCORE Authorization 
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -55,6 +58,10 @@ namespace WebApplicationMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
+        // Import ASP.NETCORE Authorization 
+        // This will put the data in the DB and is more important for secruity issues 
+        [Authorize]
         public async Task<IActionResult> Create([Bind("Id,ProjectName,Description,URL")] Projects projects)
         {
             if (ModelState.IsValid)

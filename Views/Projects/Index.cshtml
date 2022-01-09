@@ -3,14 +3,32 @@
 *@
 @model IEnumerable<WebApplicationMVC.Models.Projects>
 
+    @using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
 @{
     ViewData["Title"] = "Featured Projects";
 }
 
 <h1 >@ViewData["Title"]</h1>
 
+
 <p>
-    <a class = "projectButton" asp-action="Create" >Add new project</a>
+    @if (SignInManager.IsSignedIn(User))
+    {
+
+        if (User.Identity.Name.Equals("new@gmail.com"))
+        {
+            <a class = "projectButton" asp-action="Create">Add new project</a>
+
+        }else
+        {
+            
+            <p></p>
+        }
+        }
 </p>
 
 
@@ -28,7 +46,7 @@
             <h2 class = "projectHeader">
                 @Html.DisplayFor(modelItem => item.ProjectName)
 
-                <a href = "@Html.DisplayFor(modelItem => item.URL)" target = "_blank" class = "link-Text" > <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                <a href = "@Html.DisplayFor(modelItem => item.URL)" target = "_blank" class = "link-Text-Icon" > <i class="fa fa-external-link" aria-hidden="true"></i></a>
             </h2>
 
             
@@ -47,14 +65,20 @@
     </ul>
             <p>
                 @Html.DisplayFor(modelItem => item.Description)
-            </p>
+        </p>
 
-         
-            @*<p>
+        @if (SignInManager.IsSignedIn(User))
+    {
+        if (User.Identity.Name.Equals("new@gmail.com")) { 
+        
+        <p>
             <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </p>*@
+                </p> 
+        }
+    }
+       
 }
             
 
